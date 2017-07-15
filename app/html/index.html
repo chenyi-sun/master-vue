@@ -18,6 +18,22 @@
         >
             <div v-if="show">{{test1}}</div>
         </transition>
+        <br/>
+        <br/>
+        <div  v-on:click="buttom2" class="buttom">buttom</div>
+        <transition
+           v-on:before-enter="beforeEnter"
+           v-on:enter="enter"
+           v-on:after-enter="afterEnter"
+           v-on:enter-cancelled="enterCancelled"
+
+           v-on:before-leave="beforeLeave"
+           v-on:leave="leave"
+           v-on:after-leave="afterLeave"
+           v-on:leave-cancelled="leaveCancelled"
+        >
+            <div v-if="show2">javascrit钩子</div>
+        </transition>
     </div>
     <a href="./second.html">sss</a>
     <br/>

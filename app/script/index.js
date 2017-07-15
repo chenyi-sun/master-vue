@@ -4,6 +4,7 @@ require('./img');
 import Vue from 'vue';
 import axios from 'axios'
 import Apps from './../components/App.vue'
+import  Velocity from 'velocity-animate'
 
 // function change(paremary){
 //     this.name = "ss";
@@ -32,6 +33,7 @@ import Apps from './../components/App.vue'
         data: {
            test1: 'animation.css',
            show: false,
+           show2: false,
         },
         components: {
             'Apps': Apps
@@ -39,6 +41,33 @@ import Apps from './../components/App.vue'
         methods:{
             buttom(){
                 this.show = !this.show;
+            },
+            buttom2(){
+                this.show2 = !this.show2;
+            },
+            beforeEnter(){
+                console.log('beforeEnter');
+            },
+            enter(el){
+                console.log(el);
+            },
+            afterEnter(){
+                console.log('afterEnter');
+            },
+            enterCancelled(){
+                console.log('enterCancelled');
+            },
+            beforeLeave(){
+                console.log('beforeLeave');
+            },
+            leave(){
+                console.log('leave');
+            },
+            afterLeave(){
+                console.log('afterLeave');
+            },
+            leaveCancelled(){
+                console.log('leaveCancelled');
             }
         }
     });
