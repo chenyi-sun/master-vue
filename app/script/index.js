@@ -49,7 +49,8 @@ import  Velocity from 'velocity-animate'
                 console.log('beforeEnter');
             },
             enter(el){
-                console.log(el);
+               var dom = el;
+            //    Velocity();
             },
             afterEnter(){
                 console.log('afterEnter');
