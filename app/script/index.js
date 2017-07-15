@@ -30,10 +30,16 @@ import Apps from './../components/App.vue'
     var app = new Vue({
         el: '#app',
         data: {
-           sss: 'ssss',
+           test1: 'animation.css',
+           show: false,
         },
         components: {
             'Apps': Apps
+        },
+        methods:{
+            buttom(){
+                this.show = !this.show;
+            }
         }
     });
 

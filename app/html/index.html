@@ -9,8 +9,15 @@
 </head>
 <body>
     <div id="app">
-        {{sss}}
         <!--<apps></apps>-->
+        <div v-on:click="buttom" class="buttom">buttom</div>
+        <transition
+            name="custom-classes-transition"
+            enter-active-class="animated shake"
+            leave-active-class="animated bounceOutRight"
+        >
+            <div v-if="show">{{test1}}</div>
+        </transition>
     </div>
     <a href="./second.html">sss</a>
     <br/>
