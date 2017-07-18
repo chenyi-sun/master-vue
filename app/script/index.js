@@ -49,23 +49,30 @@ import  Velocity from 'velocity-animate'
                 console.log('beforeEnter');
             },
             enter(el){
-               var dom = el;
+               Velocity(el,{
+                   opacity: 0
+               },{duration:0});
             //    Velocity();
             },
-            afterEnter(){
-                console.log('afterEnter');
+            afterEnter(el){
+                Velocity(el,{
+                   opacity: 1
+               },{duration:300});
             },
-            enterCancelled(){
-                console.log('enterCancelled');
+            enterCancelled(el){
             },
             beforeLeave(){
                 console.log('beforeLeave');
             },
-            leave(){
-                console.log('leave');
+            leave(el){
+               Velocity(el,{
+                   opacity: 1
+               },{duration:0});
             },
-            afterLeave(){
-                console.log('afterLeave');
+            afterLeave(el){
+                Velocity(el,{
+                   opacity: 0
+               },{duration:300});
             },
             leaveCancelled(){
                 console.log('leaveCancelled');
